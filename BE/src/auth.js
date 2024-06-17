@@ -19,6 +19,9 @@ function createAuth() {
     emailAndPassword: {
       enabled: true,
       autoSignIn: true,
+      sendResetPassword: async ({ user, url }) => {
+        console.log(`Password reset link for ${user.email}: ${url}`);
+      },
     },
   };
 

@@ -100,6 +100,12 @@ function Login() {
             </button>
           </form>
 
+          <p className="mt-3 text-right text-sm">
+            <Link className="text-(--color-muted) underline" to="/forgot-password">
+              Forgot password?
+            </Link>
+          </p>
+
           {message && <p className="mt-4 text-sm">{message}</p>}
 
           <p className="mt-4 text-sm text-(--color-muted)">
