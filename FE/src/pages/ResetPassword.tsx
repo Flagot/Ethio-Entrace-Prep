@@ -51,7 +51,7 @@ function ResetPassword() {
 
           <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
             <input
-              className="w-full rounded-md border border-(--color-border) bg-white px-3 py-2 text-sm outline-none focus:border-black"
+              className="w-full rounded-md border border-(--color-border) bg-(--color-input-bg) px-3 py-2 text-sm outline-none focus:border-(--color-primary)"
               type="password"
               placeholder="New password"
               value={password}
@@ -60,7 +60,7 @@ function ResetPassword() {
               required
             />
             <button
-              className="w-full rounded-md bg-black px-3 py-2 text-sm font-medium text-white transition hover:bg-(--color-primary-hover) disabled:cursor-not-allowed disabled:opacity-70"
+              className="w-full rounded-md bg-(--color-primary) px-3 py-2 text-sm font-medium text-(--color-on-primary) transition hover:bg-(--color-primary-hover) disabled:cursor-not-allowed disabled:opacity-70"
               type="submit"
               disabled={loading}
             >
@@ -72,7 +72,7 @@ function ResetPassword() {
 
           <p className="mt-4 text-sm text-(--color-muted)">
             Back to{" "}
-            <Link className="font-medium text-black underline" to="/login">
+            <Link className="font-medium text-(--color-text) underline" to="/login">
               Login
             </Link>
           </p>
