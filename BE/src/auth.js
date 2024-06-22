@@ -16,6 +16,12 @@ function createAuth() {
     database: mongodbAdapter(db),
     baseURL: process.env.BETTER_AUTH_URL || "http://localhost:5000",
     trustedOrigins: [frontendURL],
+    session: {
+      // Keep sessions valid for a week so users stay signed in.
+      expiresIn: 60 * 60 * 24 * 7,
+      // Refresh roughly every 12 hours while active.
+      updateAge: 60 * 60 * 12,
+    },
     emailAndPassword: {
       enabled: true,
       autoSignIn: true,
